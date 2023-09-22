@@ -1,3 +1,5 @@
+import numpy as np
+
 def add_tax(costs, tax):
     tax_value = (1 + tax)
     for cost in costs:    
@@ -28,11 +30,12 @@ while i < len(cost_list):
 prices = tax_list
 customers = name_list
 
-statements = {}
+list = {}
 
-for key in customers:
-    for value in prices:
-        statements[key] = value
-        prices.remove(value)
-        break
-print(statements)
+for i in range(len(customers)):
+    if customers[i] not in list:
+        list[customers[i]] = prices[i]
+    else: 
+         list[customers[i]] = prices[i] + list[customers[i]]
+
+print(list)
