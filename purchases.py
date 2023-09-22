@@ -28,12 +28,6 @@ while i < len(cost_list):
 prices = tax_list
 customers = name_list
 
-print(prices)
-print(customers)
-
-
-# two conditions
-
 statements = {}
 
 for key in customers:
