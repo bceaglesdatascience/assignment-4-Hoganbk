@@ -1,5 +1,3 @@
-import numpy as np
-
 def add_tax(costs, tax):
     tax_value = (1 + tax)
     for cost in costs:    
